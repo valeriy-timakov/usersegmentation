@@ -10,10 +10,12 @@ import org.springframework.batch.item.file.mapping.FieldSetMapper;
 import org.springframework.batch.item.file.transform.DelimitedLineTokenizer;
 import org.springframework.batch.item.file.transform.FieldSet;
 import org.springframework.core.io.Resource;
+import org.springframework.stereotype.Component;
 import org.springframework.validation.BindException;
 
 import i.valeriytimakov.usersegmentation.model.User;
 
+@Component
 public class UsersParser {
 	
 	private FlatFileItemReader<User> fileReader;
