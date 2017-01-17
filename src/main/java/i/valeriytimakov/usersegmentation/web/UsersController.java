@@ -24,6 +24,11 @@ import i.valeriytimakov.usersegmentation.utils.UsersParser;
 @RestController
 public class UsersController {
 	
+	public UsersController(UsersRepository usersRepository, UsersParser usersParser) {
+		this.usersRepository = usersRepository;
+		this.usersParser = usersParser;
+	}
+	
 	private static final Logger logger = LoggerFactory.getLogger(UsersController.class);
 	
 	@Autowired(required=true)
